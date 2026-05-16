@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Hotel Grand Blue Star</title>
+  <meta name="description" content="Contact Hotel Grand Blue Star, Mangaluru. Send an enquiry via WhatsApp, call us, or find us on Falnir Road.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230B1929'/><text y='73' x='17' fill='%23B8935A' font-family='Georgia,serif' font-size='70' font-weight='300'>G</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav nav--solid" id="nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Grand Blue Star</span>
+        <span class="nav-place">Mangaluru</span>
+      </a>
+      <ul class="nav-desktop">
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="contact.html" class="nav-inquire">Inquire</a>
+        <button class="nav-menu" id="nav-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <button class="nav-overlay-close" id="nav-close">Close</button>
+    <nav class="nav-overlay-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-overlay-tel"><a href="tel:+917338309555">+91 73383 09555</a></div>
+  </div>
+
+
+  <main>
+
+    <!-- Contact info + map -->
+    <div class="ct-wrap page-start">
+
+      <div class="ct-info reveal">
+        <span class="label">Grand Blue Star</span>
+        <h1 class="ct-title">Begin your<br><em>stay</em></h1>
+
+        <address class="ct-address">
+          Falnir Road<br>
+          Mangaluru, Karnataka 575001<br>
+          India
+        </address>
+
+        <dl class="ct-list">
+          <div class="ct-row">
+            <dt>Phone</dt>
+            <dd><a href="tel:+917338309555">+91 73383 09555</a></dd>
+          </div>
+          <div class="ct-row">
+            <dt>Landline</dt>
+            <dd><a href="tel:08244110363">0824-4110363</a></dd>
+          </div>
+          <div class="ct-row">
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/917338309555" target="_blank" rel="noopener">Message us directly &rarr;</a></dd>
+          </div>
+          <div class="ct-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:hotelgrandbluestarmnglr@gmail.com">hotelgrandbluestarmnglr<wbr>@gmail.com</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="ct-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4841.753396598341!2d74.8436405750746!3d12.868484687437522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b990c9e2a49%3A0x99ffa05e10da80b7!2sHOTEL%20GRAND%20BLUE%20STAR%20MANGALORE!5e1!3m2!1sen!2sin!4v1776251710278!5m2!1sen!2sin"
+          width="100%" height="100%"
+          style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Hotel Grand Blue Star location">
+        </iframe>
+      </div>
+
+    </div>
+
+    <!-- Enquiry form -->
+    <div class="ct-form-section">
+      <div class="reveal">
+        <span class="label">Send an Enquiry</span>
+        <h2 class="inquiry-title">How can we<br><em>help you?</em></h2>
+        <p class="inquiry-sub">Tell us what you're looking for and we'll respond personally — usually within a few hours.</p>
+      </div>
+
+      <form class="inquiry-form reveal" id="inquiry-form" novalidate>
+        <div class="field">
+          <label class="field-label" for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Full name">
+        </div>
+        <div class="field">
+          <label class="field-label" for="room">Room Interest</label>
+          <select id="room" name="room">
+            <option value="Family Room">Family Room</option>
+            <option value="Double Room">Double Room</option>
+            <option value="Single Room">Single Room</option>
+            <option value="Not sure yet" selected>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field field-row">
+          <div>
+            <label class="field-label" for="checkin">Arrival</label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div>
+            <label class="field-label" for="checkout">Departure</label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="guests">Number of Guests</label>
+          <select id="guests" name="guests">
+            <option>1 guest</option>
+            <option selected>2 guests</option>
+            <option>3 guests</option>
+            <option>4 guests</option>
+            <option>5 or more</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Special requests, questions, or anything you'd like us to know..."></textarea>
+        </div>
+        <div class="form-submit-wrap">
+          <button type="submit" class="cta cta-wa">Send Enquiry via WhatsApp</button>
+          <p class="form-submit-note">Opens WhatsApp with your details pre-filled. We respond within a few hours.</p>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <span class="footer-name">Grand Blue Star</span>
+        <span class="footer-sub">Falnir Road · Mangaluru · Karnataka</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="rooms.html">Rooms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+917338309555">+91 73383 09555</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Hotel Grand Blue Star</p>
+    </div>
+  </footer>
+
+  <script>
+    const overlay = document.getElementById('nav-overlay');
+    document.getElementById('nav-menu').addEventListener('click', () => { overlay.classList.add('open'); overlay.removeAttribute('aria-hidden'); });
+    document.getElementById('nav-close').addEventListener('click', () => { overlay.classList.remove('open'); overlay.setAttribute('aria-hidden', 'true'); });
+
+    document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name     = document.getElementById('name').value.trim();
+      const room     = document.getElementById('room').value;
+      const checkin  = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const guests   = document.getElementById('guests').value;
+      const message  = document.getElementById('message').value.trim();
+      if (!name || !checkin || !checkout) { alert('Please fill in your name and travel dates.'); return; }
+      const txt = `Hello Hotel Grand Blue Star,\n\nI would like to make an enquiry about a stay.\n\n*Name:* ${name}\n*Room interest:* ${room}\n*Arrival:* ${checkin}\n*Departure:* ${checkout}\n*Guests:* ${guests}${message ? '\n*Message:* ' + message : ''}\n\nLooking forward to hearing from you.`;
+      window.open('https://wa.me/917338309555?text=' + encodeURIComponent(txt), '_blank');
+    });
+
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
+  </script>
+</body>
+</html>

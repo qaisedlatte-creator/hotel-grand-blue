@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Room — Hotel Grand Blue Star</title>
+  <meta name="description" content="The Double Room at Hotel Grand Blue Star, Mangaluru. Elegant interiors, warm ambient light, and a king or twin configuration for two.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230B1929'/><text y='73' x='17' fill='%23B8935A' font-family='Georgia,serif' font-size='70' font-weight='300'>G</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav nav--solid" id="nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Grand Blue Star</span>
+        <span class="nav-place">Mangaluru</span>
+      </a>
+      <ul class="nav-desktop">
+        <li><a href="rooms.html" class="active">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="contact.html" class="nav-inquire">Inquire</a>
+        <button class="nav-menu" id="nav-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <button class="nav-overlay-close" id="nav-close">Close</button>
+    <nav class="nav-overlay-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-overlay-tel"><a href="tel:+917338309555">+91 73383 09555</a></div>
+  </div>
+
+
+  <main>
+
+    <div class="rd-hero page-start">
+      <img src="images/photo_2026-04-14_21-42-18.jpg"
+           alt="Double Room at Hotel Grand Blue Star, Mangaluru">
+      <div class="rd-hero-veil"></div>
+      <div class="rd-hero-tag">
+        <span class="label">Hotel Grand Blue Star</span>
+        <h1 class="rd-hero-name">Double Room</h1>
+      </div>
+    </div>
+
+    <div class="rd-body reveal">
+      <p class="rd-desc">"Your own world. A room that asks only that you stay a little longer."</p>
+      <p class="rd-body-text">
+        The Double Room is composed for two who wish to simply be. Thoughtfully designed with your choice of a king bed or twin configuration, it offers warm, ambient interiors that invite rest without effort. The proportions are generous without being excessive — a bed, light, stillness, and the occasional sound of Mangaluru finding its own rhythm outside. Nothing more is needed.
+      </p>
+    </div>
+
+    <div class="rd-amenities reveal">
+      <p class="rd-amenities-title">What's included</p>
+      <ul class="rd-amenities-list">
+        <li>King or twin beds</li>
+        <li>Warm ambient lighting</li>
+        <li>Air conditioning</li>
+        <li>High-speed WiFi</li>
+        <li>Smart television</li>
+        <li>Daily housekeeping</li>
+        <li>24/7 room service</li>
+        <li>En-suite bathroom</li>
+        <li>In-room safe</li>
+        <li>Premium toiletries</li>
+        <li>Mineral water daily</li>
+        <li>Work desk</li>
+      </ul>
+    </div>
+
+    <div class="inquiry-section" id="inquire">
+      <div class="reveal">
+        <span class="label">Make an Enquiry</span>
+        <h2 class="inquiry-title">Interested in the<br><em>Double Room?</em></h2>
+        <p class="inquiry-sub">Share your details and we'll get back to you personally. All enquiries are handled with care and discretion.</p>
+      </div>
+
+      <form class="inquiry-form reveal" id="inquiry-form" novalidate>
+        <div class="field">
+          <label class="field-label" for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Full name">
+        </div>
+        <div class="field field-row">
+          <div>
+            <label class="field-label" for="checkin">Arrival</label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div>
+            <label class="field-label" for="checkout">Departure</label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="guests">Number of Guests</label>
+          <select id="guests" name="guests">
+            <option selected>1 guest</option>
+            <option>2 guests</option>
+            <option>3 guests</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="pref">Bed Preference</label>
+          <select id="pref" name="pref">
+            <option>King bed</option>
+            <option>Twin beds</option>
+            <option>No preference</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="message">Notes (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Special requests, questions, or anything you'd like us to know..."></textarea>
+        </div>
+        <div class="form-submit-wrap">
+          <button type="submit" class="cta cta-wa">Send Enquiry via WhatsApp</button>
+          <p class="form-submit-note">Opens WhatsApp with your details pre-filled. We respond within a few hours.</p>
+        </div>
+      </form>
+    </div>
+
+    <a href="rooms.html" class="rd-back">← All Rooms</a>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <span class="footer-name">Grand Blue Star</span>
+        <span class="footer-sub">Falnir Road · Mangaluru · Karnataka</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="rooms.html">Rooms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+917338309555">+91 73383 09555</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Hotel Grand Blue Star</p>
+    </div>
+  </footer>
+
+  <script>
+    const overlay = document.getElementById('nav-overlay');
+    document.getElementById('nav-menu').addEventListener('click', () => { overlay.classList.add('open'); overlay.removeAttribute('aria-hidden'); });
+    document.getElementById('nav-close').addEventListener('click', () => { overlay.classList.remove('open'); overlay.setAttribute('aria-hidden', 'true'); });
+
+    document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name     = document.getElementById('name').value.trim();
+      const checkin  = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const guests   = document.getElementById('guests').value;
+      const pref     = document.getElementById('pref').value;
+      const message  = document.getElementById('message').value.trim();
+      if (!name || !checkin || !checkout) { alert('Please fill in your name and dates.'); return; }
+      const txt = `Hello Hotel Grand Blue Star,\n\nI would like to enquire about the *Double Room*.\n\n*Name:* ${name}\n*Arrival:* ${checkin}\n*Departure:* ${checkout}\n*Guests:* ${guests}\n*Bed preference:* ${pref}${message ? '\n*Notes:* ' + message : ''}\n\nThank you.`;
+      window.open('https://wa.me/917338309555?text=' + encodeURIComponent(txt), '_blank');
+    });
+
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
+  </script>
+</body>
+</html>

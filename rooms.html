@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms — Hotel Grand Blue Star</title>
+  <meta name="description" content="Three distinct rooms at Hotel Grand Blue Star, Mangaluru. Family, Double, and Single rooms — each thoughtfully designed for comfort.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230B1929'/><text y='73' x='17' fill='%23B8935A' font-family='Georgia,serif' font-size='70' font-weight='300'>G</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav nav--solid" id="nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Grand Blue Star</span>
+        <span class="nav-place">Mangaluru</span>
+      </a>
+      <ul class="nav-desktop">
+        <li><a href="rooms.html" class="active">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="contact.html" class="nav-inquire">Inquire</a>
+        <button class="nav-menu" id="nav-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <button class="nav-overlay-close" id="nav-close">Close</button>
+    <nav class="nav-overlay-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-overlay-tel"><a href="tel:+917338309555">+91 73383 09555</a></div>
+  </div>
+
+
+  <!-- Page header -->
+  <div class="pg-header page-start">
+    <span class="label">Grand Blue Star</span>
+    <h1 class="pg-title">The<br><em>Rooms</em></h1>
+  </div>
+
+  <!-- Rooms -->
+  <main>
+
+    <div class="rl-room">
+      <div class="rl-room-visual">
+        <img src="images/photo_2026-04-14_21-41-41.jpg"
+             alt="Family Room at Hotel Grand Blue Star" loading="lazy">
+      </div>
+      <div class="rl-room-text reveal">
+        <span class="label">Family Room</span>
+        <h2 class="rl-room-title">Space to<br><em>breathe</em></h2>
+        <p class="rl-room-desc">A spacious sanctuary for those who travel together. Separated sleeping area, a generous living space, and a scenic balcony that frames the world outside at a pleasant distance.</p>
+        <a href="room-family.html" class="cta">Discover this room</a>
+      </div>
+    </div>
+
+    <div class="rl-room">
+      <div class="rl-room-visual">
+        <img src="images/photo_2026-04-14_21-42-18.jpg"
+             alt="Double Room at Hotel Grand Blue Star" loading="lazy">
+      </div>
+      <div class="rl-room-text reveal">
+        <span class="label">Double Room</span>
+        <h2 class="rl-room-title">Your own<br><em>world</em></h2>
+        <p class="rl-room-desc">Designed for two who wish to simply be. With a king or twin configuration, warm ambient light, and interiors that invite rest — a study in comfortable restraint.</p>
+        <a href="room-double.html" class="cta">Discover this room</a>
+      </div>
+    </div>
+
+    <div class="rl-room">
+      <div class="rl-room-visual">
+        <img src="images/photo_2026-04-14_21-43-16.jpg"
+             alt="Single Room at Hotel Grand Blue Star" loading="lazy">
+      </div>
+      <div class="rl-room-text reveal">
+        <span class="label">Single Room</span>
+        <h2 class="rl-room-title">The art of<br><em>solitude</em></h2>
+        <p class="rl-room-desc">For the traveler who seeks their own counsel. One premium bed, complete quiet, and a space that asks for nothing but your presence.</p>
+        <a href="room-single.html" class="cta">Discover this room</a>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <span class="footer-name">Grand Blue Star</span>
+        <span class="footer-sub">Falnir Road · Mangaluru · Karnataka</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="rooms.html">Rooms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+917338309555">+91 73383 09555</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Hotel Grand Blue Star</p>
+    </div>
+  </footer>
+
+  <script>
+    const overlay = document.getElementById('nav-overlay');
+    document.getElementById('nav-menu').addEventListener('click', () => { overlay.classList.add('open'); overlay.removeAttribute('aria-hidden'); });
+    document.getElementById('nav-close').addEventListener('click', () => { overlay.classList.remove('open'); overlay.setAttribute('aria-hidden', 'true'); });
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
+  </script>
+</body>
+</html>

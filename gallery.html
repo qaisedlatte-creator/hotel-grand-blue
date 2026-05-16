@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Hotel Grand Blue Star</title>
+  <meta name="description" content="A visual look inside Hotel Grand Blue Star, Mangaluru — rooms, spaces, and the atmosphere of a genuine coastal stay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%230B1929'/><text y='73' x='17' fill='%23B8935A' font-family='Georgia,serif' font-size='70' font-weight='300'>G</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav nav--solid" id="nav">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Grand Blue Star</span>
+        <span class="nav-place">Mangaluru</span>
+      </a>
+      <ul class="nav-desktop">
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="contact.html" class="nav-inquire">Inquire</a>
+        <button class="nav-menu" id="nav-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <button class="nav-overlay-close" id="nav-close">Close</button>
+    <nav class="nav-overlay-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-overlay-tel"><a href="tel:+917338309555">+91 73383 09555</a></div>
+  </div>
+
+
+  <!-- Page header -->
+  <div class="pg-header page-start">
+    <span class="label">Hotel Grand Blue Star</span>
+    <h1 class="pg-title">The<br><em>Spaces</em></h1>
+  </div>
+
+  <!-- Gallery grid -->
+  <div class="gl-grid">
+
+    <figure class="gl-item">
+      <img src="images/Hotel_Grand_Blue_Star.jpg"
+           alt="Exterior of Hotel Grand Blue Star, Falnir Road, Mangaluru" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/photo_2026-04-14_21-41-41.jpg"
+           alt="Family Room at Hotel Grand Blue Star" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/photo_2026-04-14_21-42-18.jpg"
+           alt="Double Room at Hotel Grand Blue Star" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/photo_2026-04-14_21-43-16.jpg"
+           alt="Single Room at Hotel Grand Blue Star" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/photo_2026-04-14_21-42-31.jpg"
+           alt="Interior corridor at Hotel Grand Blue Star" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/poster-1.jpg"
+           alt="Hotel Grand Blue Star — a stay in comfort" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/poster-2.jpg"
+           alt="Premium comfort at Hotel Grand Blue Star" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/poster-3.jpg"
+           alt="Hotel Grand Blue Star — stay in style" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/poster-4.jpg"
+           alt="Hotel Grand Blue Star — Mangaluru hospitality" loading="lazy">
+    </figure>
+
+    <figure class="gl-item">
+      <img src="images/poster-5.jpg"
+           alt="Hotel Grand Blue Star — curated stays" loading="lazy">
+    </figure>
+
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <span class="footer-name">Grand Blue Star</span>
+        <span class="footer-sub">Falnir Road · Mangaluru · Karnataka</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="rooms.html">Rooms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+917338309555">+91 73383 09555</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Hotel Grand Blue Star</p>
+    </div>
+  </footer>
+
+  <script>
+    const overlay = document.getElementById('nav-overlay');
+    document.getElementById('nav-menu').addEventListener('click', () => { overlay.classList.add('open'); overlay.removeAttribute('aria-hidden'); });
+    document.getElementById('nav-close').addEventListener('click', () => { overlay.classList.remove('open'); overlay.setAttribute('aria-hidden', 'true'); });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
+  </script>
+</body>
+</html>
