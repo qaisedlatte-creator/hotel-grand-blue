@@ -765,9 +765,9 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   transition: transform 0.9s var(--ease);
 }
 .gl-item:hover img { transform: scale(1.03); }
-/* First item spans 2 cols for visual interest */
-.gl-item:first-child { grid-column: 1 / -1; }
-.gl-item:first-child img { aspect-ratio: 16 / 9; }
+/* Wide landscape items span full width */
+.gl-item--wide { grid-column: 1 / -1; }
+.gl-item--wide img { aspect-ratio: 16 / 9; }
 
 
 /* ══════════════════════════════════════════════════════════════
@@ -843,6 +843,34 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 }
 
 
+/* ── HOME ATMOSPHERE (dark section) ────────────────────────── */
+.h-atmo {
+  background: var(--dark);
+  padding: 8rem 1.75rem 9rem;
+  border-top: 1px solid rgba(184,147,90,0.08);
+}
+.h-atmo-inner { max-width: 560px; }
+.h-atmo-inner .label { color: rgba(184,147,90,0.5); }
+.h-atmo-inner .gold-rule { background: rgba(184,147,90,0.35); }
+.h-atmo-heading {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.1;
+  margin-top: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+.h-atmo-heading em { font-style: italic; color: var(--gold); }
+.h-atmo-body {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.36);
+  line-height: 2;
+  margin-bottom: 2.8rem;
+  max-width: 400px;
+}
+
 /* ── PREFERS REDUCED MOTION ─────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -892,8 +920,10 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
   /* Gallery */
   .gl-grid { padding: 0 0 8rem; gap: 4px; grid-template-columns: repeat(3, 1fr); }
-  .gl-item:first-child { grid-column: span 1; }
-  .gl-item:first-child img { aspect-ratio: 3 / 4; }
+  .gl-item:not(.gl-item--wide) img { aspect-ratio: 3 / 4; }
+
+  /* Home atmosphere */
+  .h-atmo { padding: 10rem 4rem 11rem; }
 
   /* Contact */
   .ct-wrap { flex-direction: row; align-items: stretch; }
@@ -929,6 +959,8 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .h-rooms-hd { padding: 0 5rem 5rem; }
   .h-room-img { height: 48vw; max-height: 580px; }
 
+  .h-atmo { padding: 11rem 5.5rem 12rem; }
+
   .rl-room { min-height: 72vh; }
   .rl-room-text { padding: 5rem; }
 
@@ -955,6 +987,8 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
   .h-brand { padding: 11rem 6rem 12rem; }
   .h-rooms-hd { padding: 0 6rem 5rem; }
+
+  .h-atmo { padding: 12rem 6rem 13rem; }
 
   .rl-room-text { padding: 6rem; }
 
