@@ -462,12 +462,22 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
 /* ── HOME ROOMS PREVIEW ─────────────────────────────────────── */
 .h-rooms {
-  background: var(--linen);
-  padding: 7rem 0 8rem;
+  background: var(--ink);
+  padding: 7rem 0 0;
 }
 .h-rooms-hd {
-  padding: 0 1.75rem 4rem;
+  padding: 0 1.75rem 3.5rem;
 }
+.h-rooms-hd .label { color: rgba(184,147,90,0.5); }
+.h-rooms-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+.h-rooms-title em { font-style: italic; color: var(--gold); }
 
 .h-rooms-grid {
   display: flex;
@@ -479,31 +489,56 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   display: block;
   position: relative;
   overflow: hidden;
-  background: var(--paper);
 }
 .h-room-img {
+  position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 .h-room-img img {
-  width: 100%; height: 100%;
-  transition: transform 1.2s var(--ease);
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+  transition: transform 1.4s var(--ease);
 }
-.h-room:hover .h-room-img img { transform: scale(1.04); }
+.h-room:hover .h-room-img img { transform: scale(1.05); }
+
+.h-room-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8,12,22,0.82) 0%,
+    rgba(8,12,22,0.15) 48%,
+    transparent 72%
+  );
+  transition: background 0.6s var(--smooth);
+}
+.h-room:hover .h-room-veil {
+  background: linear-gradient(
+    to top,
+    rgba(8,12,22,0.92) 0%,
+    rgba(8,12,22,0.3) 60%,
+    rgba(8,12,22,0.1) 100%
+  );
+}
 
 .h-room-label {
-  padding: 1.6rem 1.75rem 2rem;
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  right: 1.75rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1rem;
 }
 .h-room-name {
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 300;
-  color: var(--ink);
+  color: #fff;
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 
@@ -894,14 +929,15 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .h-brand { padding: 9rem 4rem 10rem; }
 
   /* Home rooms — 3 columns */
-  .h-rooms { padding: 8rem 0 9rem; }
+  .h-rooms { padding: 8rem 0 0; }
   .h-rooms-hd { padding: 0 4rem 4.5rem; }
   .h-rooms-grid {
     flex-direction: row;
     gap: 2px;
   }
   .h-room { flex: 1; }
-  .h-room-img { aspect-ratio: unset; height: 55vw; max-height: 520px; }
+  .h-room-img img { aspect-ratio: unset; width: 100%; height: 55vw; max-height: 520px; object-fit: cover; }
+  .h-room-label { bottom: 2rem; left: 2rem; right: 2rem; }
 
   /* Rooms listing — side by side */
   .rl-room { flex-direction: row; min-height: 65vh; }
@@ -955,9 +991,11 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
   .h-brand { padding: 10rem 5rem 11rem; }
 
-  .h-rooms { padding: 9rem 0 10rem; }
+  .h-rooms { padding: 9rem 0 0; }
   .h-rooms-hd { padding: 0 5rem 5rem; }
-  .h-room-img { height: 48vw; max-height: 580px; }
+  .h-room-img img { height: 48vw; max-height: 580px; }
+  .h-room-label { bottom: 2.5rem; left: 2.5rem; right: 2.5rem; }
+  .h-room-name { font-size: 1.75rem; }
 
   .h-atmo { padding: 11rem 5.5rem 12rem; }
 
@@ -986,6 +1024,7 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .nav--solid { padding: 1.2rem 5rem !important; }
 
   .h-brand { padding: 11rem 6rem 12rem; }
+  .h-rooms { padding: 10rem 0 0; }
   .h-rooms-hd { padding: 0 6rem 5rem; }
 
   .h-atmo { padding: 12rem 6rem 13rem; }
