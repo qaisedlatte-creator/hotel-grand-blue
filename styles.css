@@ -954,6 +954,66 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 }
 .h-discover-card:hover .h-discover-more { text-decoration-color: var(--ink); }
 
+/* ── HOME REVIEWS CAROUSEL ──────────────────────────────────── */
+.h-reviews {
+  background: var(--linen);
+  padding: 6rem 0 7rem;
+  border-top: 1px solid rgba(28,25,22,0.07);
+  border-bottom: 1px solid rgba(28,25,22,0.07);
+  overflow: hidden;
+}
+.h-reviews-hd {
+  padding: 0 1.75rem 3rem;
+}
+
+.h-reviews-outer { overflow: hidden; }
+
+.h-reviews-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: reviews-scroll 55s linear infinite;
+}
+.h-reviews-track:hover { animation-play-state: paused; }
+
+@keyframes reviews-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.h-review {
+  flex-shrink: 0;
+  width: min(320px, 78vw);
+  background: var(--paper);
+  padding: 2.2rem 2rem 2rem;
+  border-top: 1px solid var(--gold);
+  margin: 0;
+}
+
+.h-review-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+  quotes: none;
+}
+
+.h-review-author {
+  font-family: var(--sans);
+  font-size: 0.5rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--fog);
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .h-reviews-track { animation: none; }
+}
+
 /* ── HOME STATEMENT CTA ──────────────────────────────────────── */
 .h-atmo {
   background: var(--paper);
