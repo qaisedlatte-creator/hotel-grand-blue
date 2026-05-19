@@ -463,13 +463,13 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 /* ── HOME ROOMS PREVIEW ─────────────────────────────────────── */
 .h-rooms {
   background: var(--paper);
-  padding: 0;
+  padding: 0 1.5rem 4rem;
 }
 
 .h-rooms-grid {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 1.25rem;
 }
 
 .h-room {
@@ -1008,10 +1008,10 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .h-brand { padding: 10rem 4rem 12rem; }
 
   /* Home rooms — 3 columns */
-  .h-rooms { padding: 0; }
+  .h-rooms { padding: 0 2.5rem 5rem; }
   .h-rooms-grid {
     flex-direction: row;
-    gap: 3px;
+    gap: 1.25rem;
   }
   .h-room { flex: 1; }
   .h-room-img img { aspect-ratio: unset; width: 100%; height: 62vw; max-height: 600px; object-fit: cover; }
@@ -1073,6 +1073,8 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
   .h-brand { padding: 11rem 5rem 13rem; }
 
+  .h-rooms { padding: 0 3.5rem 6rem; }
+  .h-rooms-grid { gap: 1.5rem; }
   .h-room-img img { height: 52vw; max-height: 620px; }
   .h-room-label { bottom: 2.5rem; left: 2.5rem; right: 2.5rem; }
   .h-room-name { font-size: 1.75rem; }
@@ -1119,7 +1121,9 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .nav--solid { padding: 1.2rem 5rem !important; }
 
   .h-brand { padding: 12rem 6rem 14rem; }
-  .h-rooms-name { font-size: 2rem; }
+  .h-rooms { padding: 0 4rem 7rem; }
+  .h-rooms-grid { gap: 1.75rem; }
+  .h-room-name { font-size: 2rem; }
 
   .h-discover { padding: 13rem 6rem 14rem; }
   .h-discover-cards { gap: 3.5rem; }
