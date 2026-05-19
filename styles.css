@@ -865,6 +865,75 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 }
 
 
+/* ── HOME DISCOVER (Editorial Mangaluru) ───────────────────── */
+.h-discover {
+  background: var(--paper);
+  padding: 9rem 1.75rem 10rem;
+  border-top: 1px solid var(--linen);
+}
+.h-discover-hd {
+  max-width: 560px;
+  margin-bottom: 4.5rem;
+}
+.h-discover-hd .label { margin-bottom: 0.7rem; }
+.h-discover-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.05;
+  margin-top: 0.4rem;
+}
+.h-discover-title em { font-style: italic; color: var(--stone); }
+
+.h-discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.h-discover-card { display: block; }
+
+.h-discover-img {
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+.h-discover-img img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.4s var(--ease);
+}
+.h-discover-card:hover .h-discover-img img { transform: scale(1.04); }
+
+.h-discover-cat {
+  font-family: var(--sans);
+  font-size: 0.5rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.55rem;
+}
+.h-discover-name {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.18;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s;
+}
+.h-discover-card:hover .h-discover-name { color: var(--gold); }
+.h-discover-desc {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--fog);
+  line-height: 1.95;
+  max-width: 380px;
+}
+
 /* ── HOME ATMOSPHERE (dark section) ────────────────────────── */
 .h-atmo {
   background: var(--dark);
@@ -944,6 +1013,13 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .gl-grid { padding: 0 0 8rem; gap: 4px; grid-template-columns: repeat(3, 1fr); }
   .gl-item:not(.gl-item--wide) img { aspect-ratio: 3 / 4; }
 
+  /* Home discover */
+  .h-discover { padding: 11rem 4rem 12rem; }
+  .h-discover-hd { margin-bottom: 6rem; }
+  .h-discover-grid { grid-template-columns: 1fr 1fr; gap: 5rem 3rem; }
+  .h-discover-card--feature { grid-column: 1 / -1; }
+  .h-discover-card--feature .h-discover-img img { aspect-ratio: 16 / 7; }
+
   /* Home atmosphere */
   .h-atmo { padding: 10rem 4rem 11rem; }
 
@@ -981,6 +1057,11 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .h-room-label { bottom: 2.5rem; left: 2.5rem; right: 2.5rem; }
   .h-room-name { font-size: 1.75rem; }
 
+  .h-discover { padding: 12rem 5.5rem 13rem; }
+  .h-discover-grid { grid-template-columns: repeat(3, 1fr); gap: 6rem 3.5rem; }
+  .h-discover-card--feature { grid-column: 1 / -1; }
+  .h-discover-card--feature .h-discover-img img { aspect-ratio: 21 / 8; }
+
   .h-atmo { padding: 11rem 5.5rem 12rem; }
 
   .rl-room { min-height: 72vh; }
@@ -1009,6 +1090,9 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
   .h-brand { padding: 12rem 6rem 14rem; }
   .h-rooms-name { font-size: 2rem; }
+
+  .h-discover { padding: 13rem 6rem 14rem; }
+  .h-discover-grid { gap: 7rem 4rem; }
 
   .h-atmo { padding: 12rem 6rem 13rem; }
 
