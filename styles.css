@@ -5,11 +5,11 @@
 
 /* ── TOKENS ─────────────────────────────────────────────────── */
 :root {
-  --ink:    #0E0D0C;
-  --paper:  #F8F5F0;
-  --linen:  #EEEADF;
+  --ink:    #1C1916;
+  --paper:  #EDE9E2;
+  --linen:  #E6E1D8;
   --gold:   #B8935A;
-  --fog:    #9A9188;
+  --fog:    #8C8278;
   --stone:  #6B6158;
   --dark:   #0B1929;
 
@@ -865,42 +865,51 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 }
 
 
-/* ── HOME DISCOVER (Editorial Mangaluru) ───────────────────── */
+/* ── HOME DISCOVER (Editorial — Aman-style) ─────────────────── */
 .h-discover {
   background: var(--paper);
   padding: 9rem 1.75rem 10rem;
-  border-top: 1px solid var(--linen);
+  border-top: 1px solid rgba(28,25,22,0.08);
 }
+
+/* Mobile: heading stacked above cards */
 .h-discover-hd {
-  max-width: 560px;
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 .h-discover-hd .label { margin-bottom: 0.7rem; }
 .h-discover-title {
   font-family: var(--serif);
-  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-size: clamp(2rem, 6vw, 2.8rem);
   font-weight: 300;
   color: var(--ink);
-  line-height: 1.05;
+  line-height: 1.1;
   margin-top: 0.4rem;
+  margin-bottom: 1.2rem;
 }
 .h-discover-title em { font-style: italic; color: var(--stone); }
-
-.h-discover-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
+.h-discover-intro {
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: var(--fog);
+  line-height: 1.9;
+  max-width: 340px;
 }
 
+/* Cards grid */
+.h-discover-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
 .h-discover-card { display: block; }
 
 .h-discover-img {
   overflow: hidden;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.4rem;
 }
 .h-discover-img img {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
   transition: transform 1.4s var(--ease);
@@ -909,57 +918,71 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
 
 .h-discover-cat {
   font-family: var(--sans);
-  font-size: 0.5rem;
-  letter-spacing: 0.28em;
+  font-size: 0.48rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--fog);
   display: block;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.5rem;
 }
 .h-discover-name {
   font-family: var(--serif);
-  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.55rem);
   font-weight: 300;
   color: var(--ink);
   line-height: 1.18;
-  margin-bottom: 0.75rem;
-  transition: color 0.3s;
+  margin-bottom: 0.65rem;
 }
-.h-discover-card:hover .h-discover-name { color: var(--gold); }
 .h-discover-desc {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 300;
   color: var(--fog);
-  line-height: 1.95;
-  max-width: 380px;
+  line-height: 1.9;
+  margin-bottom: 1rem;
 }
+.h-discover-more {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(28,25,22,0.2);
+  text-underline-offset: 4px;
+  letter-spacing: 0.02em;
+  transition: text-decoration-color 0.3s;
+}
+.h-discover-card:hover .h-discover-more { text-decoration-color: var(--ink); }
 
-/* ── HOME ATMOSPHERE (dark section) ────────────────────────── */
+/* ── HOME STATEMENT CTA ──────────────────────────────────────── */
 .h-atmo {
-  background: var(--dark);
-  padding: 8rem 1.75rem 9rem;
-  border-top: 1px solid rgba(184,147,90,0.08);
+  background: var(--paper);
+  padding: 9rem 1.75rem 10rem;
+  border-top: 1px solid rgba(28,25,22,0.07);
+  text-align: center;
 }
-.h-atmo-inner { max-width: 560px; }
-.h-atmo-inner .label { color: rgba(184,147,90,0.5); }
-.h-atmo-inner .gold-rule { background: rgba(184,147,90,0.35); }
+.h-atmo-inner { max-width: 640px; margin: 0 auto; }
+.h-atmo-inner .label { color: var(--fog); }
+.h-atmo-inner .gold-rule { margin: 1.6rem auto 2rem; }
 .h-atmo-heading {
   font-family: var(--serif);
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-style: italic;
+  font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 300;
-  color: rgba(255,255,255,0.88);
-  line-height: 1.1;
-  margin-top: 0.5rem;
+  color: var(--ink);
+  line-height: 1.12;
   margin-bottom: 1.8rem;
 }
-.h-atmo-heading em { font-style: italic; color: var(--gold); }
+.h-atmo-heading em { font-style: normal; color: var(--stone); }
 .h-atmo-body {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 300;
-  color: rgba(255,255,255,0.36);
+  color: var(--fog);
   line-height: 2;
   margin-bottom: 2.8rem;
-  max-width: 400px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ── PREFERS REDUCED MOTION ─────────────────────────────────── */
@@ -1013,12 +1036,9 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .gl-grid { padding: 0 0 8rem; gap: 4px; grid-template-columns: repeat(3, 1fr); }
   .gl-item:not(.gl-item--wide) img { aspect-ratio: 3 / 4; }
 
-  /* Home discover */
+  /* Home discover — tablet: 3-col card grid */
   .h-discover { padding: 11rem 4rem 12rem; }
-  .h-discover-hd { margin-bottom: 6rem; }
-  .h-discover-grid { grid-template-columns: 1fr 1fr; gap: 5rem 3rem; }
-  .h-discover-card--feature { grid-column: 1 / -1; }
-  .h-discover-card--feature .h-discover-img img { aspect-ratio: 16 / 7; }
+  .h-discover-cards { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 
   /* Home atmosphere */
   .h-atmo { padding: 10rem 4rem 11rem; }
@@ -1057,10 +1077,20 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .h-room-label { bottom: 2.5rem; left: 2.5rem; right: 2.5rem; }
   .h-room-name { font-size: 1.75rem; }
 
+  /* Home discover — desktop: Aman layout — heading left, 3 cards right */
   .h-discover { padding: 12rem 5.5rem 13rem; }
-  .h-discover-grid { grid-template-columns: repeat(3, 1fr); gap: 6rem 3.5rem; }
-  .h-discover-card--feature { grid-column: 1 / -1; }
-  .h-discover-card--feature .h-discover-img img { aspect-ratio: 21 / 8; }
+  .h-discover-inner {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+  }
+  .h-discover-hd {
+    flex: 0 0 26%;
+    margin-bottom: 0;
+    position: sticky;
+    top: 7rem;
+  }
+  .h-discover-cards { flex: 1; gap: 3rem; }
 
   .h-atmo { padding: 11rem 5.5rem 12rem; }
 
@@ -1092,7 +1122,7 @@ button { font-family: inherit; background: none; border: none; cursor: pointer; 
   .h-rooms-name { font-size: 2rem; }
 
   .h-discover { padding: 13rem 6rem 14rem; }
-  .h-discover-grid { gap: 7rem 4rem; }
+  .h-discover-cards { gap: 3.5rem; }
 
   .h-atmo { padding: 12rem 6rem 13rem; }
 
